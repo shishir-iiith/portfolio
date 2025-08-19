@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shishir Maurya - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70%;
+            height: 4px;
+            background-color: #3b82f6;
+            border-radius: 9999px;
+        }
+        .card {
+            background-color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .skill-card {
+            background-color: #ffffff;
+            border: 2px solid #e5e7eb;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            border-color: #3b82f6;
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-8 md:py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <!-- Placeholder for Profile Picture -->
+            <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-6 border-4 border-blue-400">
+                <img src="https://placehold.co/400x400/1e40af/ffffff?text=Profile" alt="Profile Picture" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">Shishir Maurya</h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-4">AI Engineer | Machine Learning & Data Science</p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm sm:text-base">
+                <a href="mailto:shishir.maurya@outlook.com" class="flex items-center text-blue-600 hover:underline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    shishir.maurya@outlook.com
+                </a>
+                <a href="https://linkedin.com/in/shishir-maurya-iiit" target="_blank" class="flex items-center text-blue-600 hover:underline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.485 2.5s-2.485-1.119-2.485-2.5c0-1.381 1.11-2.5 2.485-2.5s2.485 1.119 2.485 2.5zm-.015 4.5h-4.97v16h4.97v-16zm6.983 0h-4.97v16h4.97v-8.136c0-2.28 1.123-3.994 3.737-3.994 1.847 0 2.658.98 2.658 3.016v9.114h4.97v-9.684c0-4.965-2.658-7.234-6.398-7.234-3.523 0-5.466 1.956-6.326 3.197h-.066v-2.731z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/shishir-iiith" target="_blank" class="flex items-center text-blue-600 hover:underline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.82-.25.82-.557 0-.272-.01-1.107-.01-2.032-3.338.724-4.042-1.61-4.042-1.61-.542-1.362-1.328-1.725-1.328-1.725-1.082-.742.08-.727.08-.727 1.2.084 1.839 1.237 1.839 1.237 1.07 1.836 2.809 1.305 3.49-1 .107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.3-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.652 1.653.241 2.876.118 3.176.77.84 1.233 1.911 1.233 3.221 0 4.609-2.806 5.624-5.479 5.922.43.372.823 1.102.823 2.222 0 1.607-.015 2.897-.015 3.286 0 .307.218.67.825.556 4.764-1.586 8.203-6.084 8.203-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Experience Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 section-title">Experience</h2>
+            <div class="space-y-8">
+                <!-- Job 1 -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">AI Engineer, SGS&CO (Propelis Group)</h3>
+                    <p class="text-blue-600 text-md font-medium">Toronto, CA (Remote) | Jul 2024 - Present</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
+                        <li>Finetuned and deployed VLMs for logo tagging, reducing QC time by <span class="text-blue-600 font-bold">80%</span> and operational cost by <span class="text-blue-600 font-bold">25%</span>.</li>
+                        <li>Trained a YOLOv12 model to detect logos from rasterized artwork PDFs.</li>
+                        <li>Built and deployed a multi-agent application using LangGraph, reducing artwork edit time by <span class="text-blue-600 font-bold">70%</span>.</li>
+                        <li>Developed content extraction pipelines to detect mismatched content, reducing QC time by <span class="text-blue-600 font-bold">60%</span>.</li>
+                    </ul>
+                </div>
+                <!-- Job 2 -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Research Fellow - II, Indorama Ventures Center for Clean Energy</h3>
+                    <p class="text-blue-600 text-md font-medium">Plaksha University | Jan 2024 - Jul 2024</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
+                        <li>Formulated a Mixed Integer Quadratic Program for energy arbitrage.</li>
+                        <li>Developed a Bayesian-Stackelberg Game setting for grid-level uncertainties.</li>
+                        <li>Optimised a MILP problem to curtail peak consumption by a factor of <span class="text-blue-600 font-bold">0.2</span> and reduced battery degradation by <span class="text-blue-600 font-bold">10%</span>.</li>
+                    </ul>
+                </div>
+                <!-- Job 3 (iHub-Data) -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Research Fellow, iHub-Data (under NM-ICPS of DST, Govt. of India)</h3>
+                    <p class="text-blue-600 text-md font-medium">Aug 2022 - Feb 2024</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
+                        <li>Developed a fusion algorithm of EAQR and Deep Q-Learning to deliver an optimised schedule to operate various household loads.</li>
+                        <li>This reduced electricity cost by <span class="text-blue-600 font-bold">44%</span> in a simulated setting by exploiting prices and Solar-PV generation.</li>
+                        <li>Used data-driven research to understand household electricity consumption patterns.</li>
+                        <li>Developed an ICT-based system to collect dis-aggregated household electricity consumption data (~3 billion points).</li>
+                    </ul>
+                </div>
+                <!-- Job 4 (Center for Building Science) -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Research Assistant, Center for Building Science</h3>
+                    <p class="text-blue-600 text-md font-medium">Aug 2021 - July 2022</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
+                        <li>Designed and implemented a real-time data-driven Smart Home Energy Management System.</li>
+                        <li>Conducted experiments to study household energy use through appliance load-profiles.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Expertise Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 section-title">Core Expertise</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <!-- MLOps Card -->
+                <div class="skill-card p-6 rounded-xl shadow-lg flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v6" /><path d="M12 18v4" /><path d="M4.93 14.87l4.5-7.79" /><path d="M19.07 9.13l-4.5 7.79" /><path d="M2.05 16.89l7.79-4.5" /><path d="M14.28 21.11l7.79-4.5" /><path d="M21.95 7.12l-7.79-4.5" /><path d="M1.99 9.14l7.79 4.5" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900">MLOps</h3>
+                    <p class="text-sm text-gray-600">Deployment and lifecycle management of machine learning models.</p>
+                </div>
+                <!-- Computer Vision Card -->
+                <div class="skill-card p-6 rounded-xl shadow-lg flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" /><path d="M18.78 19.34a6 6 0 0 0-8.56 0" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="M4.93 4.93l1.41 1.41" /><path d="M17.66 17.66l1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="M4.93 19.07l1.41-1.41" /><path d="M17.66 6.34l1.41-1.41" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900">Computer Vision</h3>
+                    <p class="text-sm text-gray-600">Building and deploying models for image and video analysis.</p>
+                </div>
+                <!-- Multi-agent Systems Card -->
+                <div class="skill-card p-6 rounded-xl shadow-lg flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="18" cy="18" r="3" /><circle cx="6" cy="6" r="3" /><path d="M18 13v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1" /><path d="M16 16c-2 2-4 2-6 0" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900">Multi-agent Systems</h3>
+                    <p class="text-sm text-gray-600">Creating systems with multiple interacting intelligent agents.</p>
+                </div>
+                <!-- NLP Card -->
+                <div class="skill-card p-6 rounded-xl shadow-lg flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /><path d="M10 9h4" /><path d="M10 13h4" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900">NLP</h3>
+                    <p class="text-sm text-gray-600">Processing and understanding human language for various applications.</p>
+                </div>
+                <!-- VLMs Card -->
+                <div class="skill-card p-6 rounded-xl shadow-lg flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 9V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3" /><path d="M3 15v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3" /><path d="M7 12h10" /><path d="M10 9l-3 3 3 3" /><path d="M14 9l3 3-3 3" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900">VLMs (Multi-modal)</h3>
+                    <p class="text-sm text-gray-600">Models that can understand both text and visual information.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 section-title">Publications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Publication 1 -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Multimodal Cascaded Approach for Hierarchical Logo Tagging in Packaging Artwork Files</h3>
+                    <p class="text-sm text-gray-500 mb-2">Shishir Maurya, Anshul Verma, Yugal Gopal Sharma, Dhanush Dharmaretnam</p>
+                    <p class="text-sm text-gray-500 mb-4">13th Internation Conference on Artificial Intelligence and Soft Computing, Sep 2025</p>
+                    <a href="https://ccsit2025.org/accepted-papers" target="_blank" class="text-blue-600 hover:underline text-sm">ccsit2025.org/accepted-papers</a>
+                </div>
+                <!-- Publication 2 -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Year-Round Appliance Electricity Monitoring of a Hybrid Ventilated Single-Family Residence in Hyderabad, India</h3>
+                    <p class="text-sm text-gray-500 mb-2">Shishir Maurya, Vishal Garg, Jyotirmaya Mathur, Aviruch Bhatia</p>
+                    <p class="text-sm text-gray-500 mb-4">(Energy Informatics. EI.A 2024)</p>
+                    <a href="https://doi.org/10.1007/978-3-031-74741-0_3" target="_blank" class="text-blue-600 hover:underline text-sm">doi.org/10.1007/978-3-031-74741-0_3</a>
+                </div>
+                <!-- Publication 3 -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Summer Electricity Consumption Patterns in Households Using Appliance Load Profiles</h3>
+                    <p class="text-sm text-gray-500 mb-2">Shishir Maurya, Ganesh CGS, Vishal Garg, Jyotirmaya Mathur</p>
+                    <p class="text-sm text-gray-500 mb-4">(ACM BuildSys 2023)</p>
+                    <a href="https://doi.org/10.1145/3600100.3627027" target="_blank" class="text-blue-600 hover:underline text-sm">doi.org/10.1145/3600100.3627027</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 section-title">Key Projects & Research</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Data-Driven Multi-Agent System for Household Energy Management</h3>
+                    <p class="text-sm text-gray-500 mb-4">Aug 2022 - Dec 2022</p>
+                    <p class="text-gray-700">Developed a MARL-based Home Energy Management System, achieving a <span class="text-blue-600 font-bold">44.7%</span> reduction in electricity consumption cost in a simulated environment.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Indo-UK Research project RESIDE (Grant: EP/R008434/1)</h3>
+                    <p class="text-sm text-gray-500 mb-4">Sep 2021 - Jun 2023</p>
+                    <p class="text-gray-700">Designed a smart home energy management system as part of an Indo-UK research project funded by Department of Science and Technology, Govt. of India and Engineering and Physical Sciences Research Council, UK.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">Multi-modal Image Retrieval Based on Fisher LDA</h3>
+                    <p class="text-sm text-gray-500 mb-4">Aug 2021 - Nov 2021</p>
+                    <p class="text-gray-700">Improved image retrieval accuracy by <span class="text-blue-600 font-bold">9%</span> using Fisher LDA to apply multi-modal queries.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infographics/Data Visualization Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 section-title">At a Glance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Infographic 1: Cost Reduction -->
+                <div class="card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-4xl font-bold border-4 border-blue-300">
+                        80%
+                    </div>
+                    <p class="font-semibold text-gray-700">QC Time Reduction</p>
+                    <p class="text-sm text-gray-500">Reduction in logo regulatory QC time in human hours.</p>
+                </div>
+                <!-- Infographic 2: Cost Reduction -->
+                <div class="card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-4xl font-bold border-4 border-blue-300">
+                        25%
+                    </div>
+                    <p class="font-semibold text-gray-700">Operational Cost Saved</p>
+                    <p class="text-sm text-gray-500">Savings in operational cost with VLM-based tagging system.</p>
+                </div>
+                 <!-- Infographic 3: Edit Time Reduction -->
+                 <div class="card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-4xl font-bold border-4 border-blue-300">
+                        70%
+                    </div>
+                    <p class="font-semibold text-gray-700">Artwork Edit Time</p>
+                    <p class="text-sm text-gray-500">Reduction in manual artwork edit time using a multi-agent app.</p>
+                </div>
+                <!-- Infographic 4: Cost Reduction HEMS -->
+                <div class="card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-4xl font-bold border-4 border-blue-300">
+                        44.7%
+                    </div>
+                    <p class="font-semibold text-gray-700">Electricity Cost Saved</p>
+                    <p class="text-sm text-gray-500">Cost reduction achieved in a simulated Home Energy Management System environment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2 class="text-3xl font-bold mb-8 section-title">Skills & Technologies</h2>
+            <div class="space-y-6">
+                <!-- Languages -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Python</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">MATLAB</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">SQL</span>
+                    </div>
+                </div>
+                <!-- Machine Learning & Data Science -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">ML & Data Science</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Finetuning LLMs/VLMs</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Time Series Forecasting</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">NLP</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Computer Vision</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Multi-Agent RL</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Neural Networks</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">KANS</span>
+                    </div>
+                </div>
+                <!-- Frameworks -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Frameworks</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Transformers</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Pytorch</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Keras</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Tensorflow</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">LangGraph</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">LangChain</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Scikit-Learn</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Pandas</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow">Numpy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
